@@ -1,5 +1,5 @@
 import React from 'react'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { HashRouter, Route, Routes } from 'react-router-dom'
 import UserLayout from './components/Layout/UserLayout'
 import Home from './pages/Home'
 import { Toaster } from 'sonner';
@@ -31,7 +31,7 @@ import ProtectedRoute from './components/Common/ProtectedRoute.jsx';
 const App = () => {
   return (
     <Provider store={store}>
-      <BrowserRouter>
+      <HashRouter>
         <Toaster position='top-right' />
         <Routes>
           {/* User Layout */}
@@ -61,7 +61,7 @@ const App = () => {
             <Route path='orders' element={<OrederManagemeant />} />
           </Route>
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </Provider>
   )
 }
